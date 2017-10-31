@@ -1,5 +1,5 @@
 ---
 applications: 
-- name: compare-hello-java
+- name: compare-hello-java-PCF
   memory: 512M
   path: target/compare.war
