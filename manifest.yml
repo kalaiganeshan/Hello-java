@@ -3,5 +3,5 @@ applications:
 - name: compare-hello-java-PCF
   memory: 512M
   path: target/compare-hello-java-1.0.war
-   random-route: true
+  random-route: true
 
