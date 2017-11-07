@@ -6,9 +6,9 @@ pipeline {
         echo '---Build started----!'
         git url:'https://github.com/kalaiganeshan/Hello-java.git'
         sh 'mvn clean package -DskipTests=true'
-                    }
+          }
       }
-    }
+    
     stage('Test') {
       parallel {
         stage('Unit Tests') {
@@ -38,8 +38,7 @@ pipeline {
          steps { 
 	  echo '-----Sonar Analysis started----'
 	  sh 'mvn sonar:sonar -Dsonar.host.url=http://54.242.162.103:9000/ -Dsonar.sources=src/main/java'
-           
-                    }
+            }
                 }
     stage('Deploy') {
       steps {
