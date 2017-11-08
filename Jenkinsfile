@@ -35,11 +35,10 @@ pipeline {
     stage('CodeAnalysis') {
       steps {
         echo '-----Sonar Analysis started----'
-        sh '''mvn sonar:sonar -Dsonar.host.url=http://54.209.32.111:9000/sonar/ -Dsonar.sources=src/main/java
+        sh 'mvn sonar:sonar -Dsonar.host.url=http://54.209.32.111:9000/sonar/ -Dsonar.sources=src/main/java'
 
 
 
-'''
       }
     }
     stage('Deploy') {
