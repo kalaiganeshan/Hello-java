@@ -36,14 +36,12 @@ pipeline {
       steps {
         echo '-----Sonar Analysis started----'
         sh 'mvn sonar:sonar -Dsonar.host.url=http://54.209.32.111:9000/sonar/ -Dsonar.sources=src/main/java'
-
-
-
       }
     }
     stage('Deploy') {
       steps {
         echo 'Ship It!'
+        sh 'mvn deploy:deploy-file -DgroupId=org.blueocean.samples -DartifactId=blueocean-hello-java -Dversion=1.0 -DgeneratePom=true -Dpackaging=war -DrepositoryId=nexus -Durl=http://54.209.32.111:8082/repository/studiorepo -Dfile=target/blueocean-hello-java-1.0.war'
       }
     }
   }
