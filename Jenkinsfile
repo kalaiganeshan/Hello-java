@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-        label 'my-defined-label'
+        label 'H21'
         customWorkspace '/var/lib/jenkins/jobs/Cus-Dir'
     }
 }
