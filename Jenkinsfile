@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+        label 'my-defined-label'
+        customWorkspace '/var/lib/jenkins/jobs/Cus-Dir'
+    }
+}
   stages {
     stage('Build') {
       steps {
