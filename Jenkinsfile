@@ -2,7 +2,7 @@ pipeline {
   agent {
     node {
         label ''
-        customWorkspace '/var/lib/jenkins/workspace/${JOB_NAME}'
+        customWorkspace '/var/lib/jenkins/workspace/Hello-java-BlueOc/'
     }
 }
   stages {
