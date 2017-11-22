@@ -2,7 +2,7 @@ pipeline {
  agent {
         label {
             label ""
-         customWorkspace "/workspace/${JOB_NAME}/${BUILD_NUMBER}"
+         customWorkspace "/var/lib/jenkins/workspace/${JOB_NAME}/${BUILD_NUMBER}"
         }
     }
 
