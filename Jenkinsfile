@@ -2,7 +2,7 @@ pipeline {
  agent {
         label {
             label ""
-         customWorkspace "${JOB_NAME}/${BUILD_NUMBER}/${BUILD_TAG}"
+         customWorkspace "${JOB_NAME}/${BUILD_NUMBER}"
         }
     }
 
