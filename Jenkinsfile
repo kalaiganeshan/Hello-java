@@ -1,10 +1,11 @@
 pipeline {
-  agent {
-    node {
-        label ''
-        customWorkspace '/var/lib/jenkins/workspace/Hello-java-BlueOc/'
+ agent {
+        label {
+            label ""
+            customWorkspace ${JOB_NAME}/${CUSTOM_BUILD_PARAM}/${BUILD_NUMBER}
+        }
     }
-}
+
   stages {
     stage('Build') {
       steps {
