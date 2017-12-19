@@ -1,3 +1,4 @@
+env.dockerimagename="devopsbasservice/buildonframework:buildon-jenkinsfile"
 pipeline {
  agent {
         label {
