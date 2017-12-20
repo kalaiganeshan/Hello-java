@@ -1,4 +1,4 @@
-env.dockerimagename="devopsbasservice/buildonframework:buildon-Jenkinsfile2.1"
+env.dockerimagename="devopsbasservice/buildonframework:buildonJenkinsfile2.1"
 pipeline {
   stages {
     stage('Build') {
@@ -8,7 +8,17 @@ pipeline {
       }
     }
     stage('Test') {
-      parallel {
+      steps {
+         
+         echo 'Test success'
+      }
+    }
+  }
+}
+      
+      
+      
+     /* parallel {
         stage('Unit Tests') {
           steps {
             echo 'Unit Tests Are Awesome!'
@@ -31,4 +41,5 @@ pipeline {
         }
       }
     }
+    *?
   
