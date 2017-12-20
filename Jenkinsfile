@@ -1,4 +1,4 @@
-env.dockerimagename="devopsbasservice/buildonframework:buildonJenkinsfile2.1"
+env.dockerimagename="devopsbasservice/buildonframework:buildon-Jenkinsfile2.1"
 pipeline {
   stages {
     stage('Build') {
