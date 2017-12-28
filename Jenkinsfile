@@ -7,6 +7,7 @@ env.dockerimagename="devopsbasservice/buildonframework:buildonJenkinsfile2.1"
         echo 'Build started!'
         git 'https://github.com/kalaiganeshan/Hello-java.git'
         sh 'mvn clean package -DskipTests=true'
+        sh 'sleep 30s'
       }
     }
     stage('Test') {
