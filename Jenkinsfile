@@ -12,7 +12,7 @@ env.dockerimagename="devopsbasservice/buildonframework:buildonJenkinsfile2.1"
     }
     stage('Test') {
       steps {
-         sh 'slep 30s'
+         sh 'sleep 30s'
          echo 'Test success'
       }
     }
